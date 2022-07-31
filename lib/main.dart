@@ -38,12 +38,14 @@ class _MyAppState extends State<MyApp> {
               return ListView.builder(
                 itemCount: snapshot.data?.length,
                 itemBuilder: (context, i){
+                  
                   return Card(
                     child: ListTile(
                       subtitle: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Text(snapshot.data![i]['title'], style: const TextStyle(fontSize: 20)),
+                        children:[
+                          Text(snapshot.data![i]['title'], style: const TextStyle(fontSize: 20)),  
+                          Text(snapshot.data![i]['description'], style: const TextStyle(fontSize: 15)), 
                       ]),
                     ),
                   );
